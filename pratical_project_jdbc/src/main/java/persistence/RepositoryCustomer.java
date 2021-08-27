@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import model.Customer;
+import model.CustomerExample;
 import util.DBUtil;
 
 public class RepositoryCustomer {
@@ -17,9 +17,8 @@ public class RepositoryCustomer {
         connection = DBUtil.getDBConnection();
     }
 
-    public List<Customer> listAllCustomers() {
-        Customer customer = new Customer();
-        List<Customer> customerList = new ArrayList<Customer>();
+    public List<CustomerExample> listAllCustomers() {
+        List<CustomerExample> customerExampleList = new ArrayList<CustomerExample>();
         String sql = "SELECT * FROM customer";
         try {
             PreparedStatement pstmt = DBUtil.getDBConnection().prepareStatement(sql);
@@ -27,23 +26,24 @@ public class RepositoryCustomer {
             ResultSet resultSet = pstmt.executeQuery();
 
             while(resultSet.next()) {
-                customer.setAccountStatus(resultSet.getInt("account_status"));
-                customer.setEmail(resultSet.getString("email"));
-                customer.setFirstName(resultSet.getString("first_name"));
-                customer.setLastName(resultSet.getString("last_name"));
-                customer.setMiddleName(resultSet.getString("middle_name"));
-                customer.setPassword(resultSet.getString("password"));
-                customer.setPhoneNumber(resultSet.getString("phone_number"));
-                customer.setProfileImage(resultSet.getString("profile_image"));
-                customer.setUserName(resultSet.getString("username"));
-                customer.setCustomerId(resultSet.getInt("customer_id"));
-                customerList.add(customer);
+                CustomerExample customerExample = new CustomerExample();
+                customerExample.setAccountStatus(resultSet.getInt("account_status"));
+                customerExample.setEmail(resultSet.getString("email"));
+                customerExample.setFirstName(resultSet.getString("first_name"));
+                customerExample.setLastName(resultSet.getString("last_name"));
+                customerExample.setMiddleName(resultSet.getString("middle_name"));
+                customerExample.setPassword(resultSet.getString("password"));
+                customerExample.setPhoneNumber(resultSet.getString("phone_number"));
+                customerExample.setProfileImage(resultSet.getString("profile_image"));
+                customerExample.setUserName(resultSet.getString("username"));
+                customerExample.setCustomerId(resultSet.getInt("customer_id"));
+                customerExampleList.add(customerExample);
             }
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-        return customerList;
+        return customerExampleList;
     }
 
 //    public void updateStockProduct(int customerId, int newStatus) {

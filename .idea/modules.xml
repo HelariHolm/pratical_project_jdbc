@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/pratical_project_jdbc/pratical_project.iml" filepath="$PROJECT_DIR$/pratical_project_jdbc/pratical_project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pratical_project_hibernate/pratical_project (1).iml" filepath="$PROJECT_DIR$/pratical_project_hibernate/pratical_project (1).iml" />
+    </modules>
+  </component>
+</project>
