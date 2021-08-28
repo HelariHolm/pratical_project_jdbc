@@ -263,7 +263,30 @@ public class DatabaseManager {
         }
     }
 
+    private void addConstraintsTableIssue() {
+        String sql = "ALTER TABLE inspection ADD FOREIGN KEY (inspector_id) REFERENCES inspector(inspector_id);";
+        String sql1 = "ALTER TABLE inspection ADD FOREIGN KEY (inspection_type_id) REFERENCES inspection_type(inspection_type_id);";
+        try {
+            Statement stmt = connection.createStatement();
+            stmt.executeUpdate(sql);
+            stmt.executeUpdate(sql1);
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
     public void initTables() {
+        createTableCompany();
+        createTableVehicleCategories();
+        createTableTestingStation();
+        createTableInspector();
+        createTableTestingStationHasInspector();
+        createTableInspectionType();
+        createTableCustomer();
+        createTableVehicle();
+        createTableUser();
+        createTableReservation();
+        createTableInspection();
         createTablePayment();
     }
 }

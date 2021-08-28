@@ -6,6 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+
+import model.Customer;
 import model.CustomerExample;
 import util.DBUtil;
 
@@ -46,44 +48,21 @@ public class RepositoryCustomer {
         return customerExampleList;
     }
 
-//    public void updateStockProduct(int customerId, int newStatus) {
-//        connection.getTransaction().begin();
-//        int result = connection.createQuery("UPDATE Customer p SET p.accountStatus = :newValue WHERE p.id = :id")
-//                .setParameter("newValue", newStatus)
-//                .setParameter("id", customerId)
-//                .executeUpdate();
-//        connection.getTransaction().commit();
-//        if (result > 0) {
-//            System.out.println("\nCustomer status updated with success.");
-//        }
-//    }
-//
-//    public Customer findCustomerById(int id) {
-//        return connection.find(Customer.class, id);
-//    }
-//
-//    //READ
-//    //https://www.baeldung.com/hibernate-aggregate-functions
-//    public long getTotalCustomerActives() {
-//        return (long) connection.createQuery("SELECT count(c) from Customer c WHERE c.accountStatus = 1")
-//                .getSingleResult();
-//    }
-//
-//    public List<Object[]> getTotalCustomerActivesAndNotActives() {
-//        String sql = "SELECT c.accountStatus, count(c) from Customer c GROUP BY c.accountStatus";
-//        return connection.createQuery(sql).getResultList();
-//    }
-//
-//    public void updatePhoneNumberByCustomerId(int customerId, String phoneNumber) {
-//        connection.getTransaction().begin();
-//        int result = connection.createQuery("UPDATE Customer c SET c.phoneNumber = :newValue WHERE c.id = :id")
-//                .setParameter("newValue", phoneNumber)
-//                .setParameter("id", customerId)
-//                .executeUpdate();
-//        connection.getTransaction().commit();
-//        if (result > 0) {
-//            System.out.println("\n Customer phone number successfully updated!");
-//        }
-//
-//    }
+    public Customer findById(int customerId) {
+        return null;
+    }
+
+    public long getTotalCustomerActives() {
+        return 0;
+    }
+
+    public void updateCustomerPhoneNumber(int customerId, String phoneNumber) {
+
+    }
+
+    public List<Integer[]> getTotalCustomerActivesAndNotActives() {
+        List<Integer[]> list = new ArrayList<>();
+
+        return list;
+    }
 }

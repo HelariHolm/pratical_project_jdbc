@@ -7,18 +7,22 @@ import java.util.Scanner;
 public class SubMenuOptions {
 
     private MenuCustomer menuCustomer;
+    private MenuInspector menuInspector;
+    private MenuInspection menuInspection;
 
     public SubMenuOptions() {
-        this.menuCustomer = new MenuCustomer();
+        this.menuInspector = new MenuInspector();
+        this.menuInspection = new MenuInspection();
     }
+
 
     private int menuOptions(Scanner input) {
         System.out.println("\n/***************************************************/");
         System.out.println("Select the menu option: ");
         System.out.println("-------------------------\n");
         System.out.println();
-        System.out.println("1: Sub Menu - Customer");
-        System.out.println("2: Sub Menu - Delivery");
+        System.out.println("1: Sub Menu - Inspector");
+        System.out.println("2: Sub Menu - Inspection");
         System.out.println("3: Sub Menu - <NAME>");
         System.out.println("4: Sub Menu - <NAME>");
         System.out.println("100 - Quit");
@@ -34,9 +38,10 @@ public class SubMenuOptions {
             userChoice = menuOptions(input);
             switch (userChoice) {
                 case 1:
-                    this.menuCustomer.menuChoice(input);
+                    this.menuInspector.menuChoice(input);
                     break;
                 case 2:
+                    this.menuInspection.menuChoice(input);
                     break;
                 case 3:
                     break;
@@ -53,7 +58,6 @@ public class SubMenuOptions {
                 case 9:
                     break;
                 case 10:
-
                     break;
                 case 100:
                     input.close();
@@ -66,6 +70,7 @@ public class SubMenuOptions {
         } while (userChoice != 100);
         System.out.println("Closing system...");
         System.out.println("Thank you. Good Bye.");
+
     }
 
 
