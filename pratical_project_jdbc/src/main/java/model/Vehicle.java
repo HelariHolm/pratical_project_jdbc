@@ -2,20 +2,20 @@ package model;
 
 public class Vehicle {
 
-    private int vehicle_id;
+    private int vehicleId;
     private String category;
-    private String licence_plate;
+    private String licencePlate;
     private String manufacturer;
     private String model;
-    private String fuel_type;
-    private int customer_id;
+    private String fuelType;
+    private int customerId;
 
-    public int getVehicle_id() {
-        return vehicle_id;
+    public int getVehicleId() {
+        return vehicleId;
     }
 
-    public void setVehicle_id(int vehicle_id) {
-        this.vehicle_id = vehicle_id;
+    public void setVehicleId(int vehicleId) {
+        this.vehicleId = vehicleId;
     }
 
     public String getCategory() {
@@ -26,12 +26,12 @@ public class Vehicle {
         this.category = category;
     }
 
-    public String getLicence_plate() {
-        return licence_plate;
+    public String getLicencePlate() {
+        return licencePlate;
     }
 
-    public void setLicence_plate(String licence_plate) {
-        this.licence_plate = licence_plate;
+    public void setLicencePlate(String licencePlate) {
+        this.licencePlate = licencePlate;
     }
 
     public String getManufacturer() {
@@ -50,32 +50,32 @@ public class Vehicle {
         this.model = model;
     }
 
-    public String getFuel_type() {
-        return fuel_type;
+    public String getFuelType() {
+        return fuelType;
     }
 
-    public void setFuel_type(String fuel_type) {
-        this.fuel_type = fuel_type;
+    public void setFuelType(String fuelType) {
+        this.fuelType = fuelType;
     }
 
-    public int getCustomer_id() {
-        return customer_id;
+    public int getCustomerId() {
+        return customerId;
     }
 
-    public void setCustomer_id(int customer_id) {
-        this.customer_id = customer_id;
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
     }
 
     @Override
     public String toString() {
         return "Vehicle{" +
-                "vehicle_id=" + vehicle_id +
+                "vehicle_id=" + vehicleId +
                 ", category='" + category + '\'' +
-                ", licence_plate='" + licence_plate + '\'' +
+                ", licence_plate='" + licencePlate + '\'' +
                 ", manufacturer='" + manufacturer + '\'' +
                 ", model='" + model + '\'' +
-                ", fuel_type='" + fuel_type + '\'' +
-                ", customer_id='" + customer_id +
+                ", fuel_type='" + fuelType + '\'' +
+                ", customer_id='" + customerId +
                 '}';
     }
 }

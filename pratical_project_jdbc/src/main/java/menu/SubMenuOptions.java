@@ -9,10 +9,12 @@ public class SubMenuOptions {
     private MenuCustomer menuCustomer;
     private MenuInspector menuInspector;
     private MenuInspection menuInspection;
+    private MenuStatistics menuStatistics;
 
     public SubMenuOptions() {
         this.menuInspector = new MenuInspector();
         this.menuInspection = new MenuInspection();
+        this.menuStatistics = new MenuStatistics();
     }
 
 
@@ -23,7 +25,7 @@ public class SubMenuOptions {
         System.out.println();
         System.out.println("1: Sub Menu - Inspector");
         System.out.println("2: Sub Menu - Inspection");
-        System.out.println("3: Sub Menu - <NAME>");
+        System.out.println("3: Sub Menu - Statistics");
         System.out.println("4: Sub Menu - <NAME>");
         System.out.println("100 - Quit");
         System.out.println("\n/***************************************************/");
@@ -44,6 +46,7 @@ public class SubMenuOptions {
                     this.menuInspection.menuChoice(input);
                     break;
                 case 3:
+                    this.menuStatistics.menuChoice(input);
                     break;
                 case 4:
                     break;

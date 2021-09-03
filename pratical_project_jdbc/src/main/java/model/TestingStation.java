@@ -2,25 +2,25 @@ package model;
 
 public class TestingStation {
 
-    private int station_id;
-    private int veh_category_id;
+    private int stationId;
+    private int vehCategoryId;
     private String address;
-    private int company_id;
+    private int companyId;
 
-    public int getStation_id() {
-        return station_id;
+    public int getStationId() {
+        return stationId;
     }
 
-    public void setStation_id(int station_id) {
-        this.station_id = station_id;
+    public void setStationId(int stationId) {
+        this.stationId = stationId;
     }
 
-    public int getVeh_category_id() {
-        return veh_category_id;
+    public int getVehCategoryId() {
+        return vehCategoryId;
     }
 
-    public void setVeh_category_id(int veh_category_id) {
-        this.veh_category_id = veh_category_id;
+    public void setVehCategoryId(int vehCategoryId) {
+        this.vehCategoryId = vehCategoryId;
     }
 
     public String getAddress() {
@@ -31,21 +31,21 @@ public class TestingStation {
         this.address = address;
     }
 
-    public int getCompany_id() {
-        return company_id;
+    public int getCompanyId() {
+        return companyId;
     }
 
-    public void setCompany_id(int company_id) {
-        this.company_id = company_id;
+    public void setCompanyId(int companyId) {
+        this.companyId = companyId;
     }
 
     @Override
     public String toString() {
         return "TestingStation{" +
-                "station_id=" + station_id +
-                ", veh_category_id='" + veh_category_id + '\'' +
+                "station_id=" + stationId +
+                ", veh_category_id='" + vehCategoryId + '\'' +
                 ", address='" + address + '\'' +
-                ", company_id='" + company_id +
+                ", company_id='" + companyId +
                 '}';
     }
 }

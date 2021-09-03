@@ -2,30 +2,30 @@ package model;
 
 public class TestingStationHasInspector {
 
-    private int station_id;
-    private int inspector_id;
+    private int stationId;
+    private int inspectorId;
 
-    public int getStation_id() {
-        return station_id;
+    public int getStationId() {
+        return stationId;
     }
 
-    public void setStation_id(int station_id) {
-        this.station_id = station_id;
+    public void setStationId(int stationId) {
+        this.stationId = stationId;
     }
 
-    public int getInspector_id() {
-        return inspector_id;
+    public int getInspectorId() {
+        return inspectorId;
     }
 
-    public void setInspector_id(int inspector_id) {
-        this.inspector_id = inspector_id;
+    public void setInspectorId(int inspectorId) {
+        this.inspectorId = inspectorId;
     }
 
     @Override
     public String toString() {
         return "TestingStationHasInspector{" +
-                "station_id='" + station_id + '\'' +
-                ", inspector_id=" + inspector_id +
+                "station_id='" + stationId + '\'' +
+                ", inspector_id=" + inspectorId +
                 '}';
     }
 }

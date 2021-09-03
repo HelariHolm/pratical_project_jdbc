@@ -2,40 +2,40 @@ package model;
 
 public class Company {
 
-    private int company_id;
-    private String company_name;
-    private int reg_code;
+    private int companyId;
+    private String companyName;
+    private int regCode;
 
-    public int getCompany_id() {
-        return company_id;
+    public int getCompanyId() {
+        return companyId;
     }
 
-    public void setCompany_id(int company_id) {
-        this.company_id = company_id;
+    public void setCompanyId(int companyId) {
+        this.companyId = companyId;
     }
 
-    public String getCompany_name() {
-        return company_name;
+    public String getCompanyName() {
+        return companyName;
     }
 
-    public void setCompany_name(String company_name) {
-        this.company_name = company_name;
+    public void setCompanyName(String companyName) {
+        this.companyName = companyName;
     }
 
-    public int getReg_code() {
-        return reg_code;
+    public int getRegCode() {
+        return regCode;
     }
 
-    public void setReg_code(int reg_code) {
-        this.reg_code = reg_code;
+    public void setRegCode(int regCode) {
+        this.regCode = regCode;
     }
 
     @Override
     public String toString() {
         return "Company{" +
-                "company_id=" + company_id +
-                ", company_name='" + company_name + '\'' +
-                ", reg_code='" + reg_code +
+                "company_id=" + companyId +
+                ", company_name='" + companyName + '\'' +
+                ", reg_code='" + regCode +
                 '}';
     }
 }

@@ -1,7 +1,5 @@
 package persistence;
 
-import model.Customer;
-import model.CustomerExample;
 import model.Inspector;
 import util.DBUtil;
 
@@ -27,11 +25,11 @@ public class RepositoryInspector {
 
             while (resultSet.next()) {
                 Inspector inspector = new Inspector();
-                inspector.setInspector_id(resultSet.getInt("inspector_id"));
+                inspector.setInspectorId(resultSet.getInt("inspector_id"));
                 inspector.setFirstName(resultSet.getString("firstname"));
                 inspector.setLastName(resultSet.getString("lastname"));
-                inspector.setLicence_expiry(resultSet.getDate("licence_expiry"));
-                inspector.setVeh_category_id(resultSet.getInt("veh_category_id"));
+                inspector.setLicenceExpiry(resultSet.getDate("licence_expiry"));
+                inspector.setVehCategoryId(resultSet.getInt("veh_category_id"));
                 inspectorList.add(inspector);
             }
         } catch (SQLException throwables) {
@@ -51,11 +49,11 @@ public class RepositoryInspector {
 
             while (resultSet.next()) {
                 inspector = new Inspector();
-                inspector.setInspector_id(resultSet.getInt("inspector_id"));
+                inspector.setInspectorId(resultSet.getInt("inspector_id"));
                 inspector.setFirstName(resultSet.getString("firstname"));
                 inspector.setLastName(resultSet.getString("lastname"));
-                inspector.setLicence_expiry(resultSet.getDate("licence_expiry"));
-                inspector.setVeh_category_id(resultSet.getInt("veh_category_id"));
+                inspector.setLicenceExpiry(resultSet.getDate("licence_expiry"));
+                inspector.setVehCategoryId(resultSet.getInt("veh_category_id"));
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();

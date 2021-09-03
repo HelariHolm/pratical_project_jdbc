@@ -4,54 +4,54 @@ import java.util.Date;
 
 public class Inspection {
 
-    private int inspection_id;
-    private int inspector_id;
-    private int inspection_type_id;
-    private int reservation_id;
-    private int vehicle_id;
+    private int inspectionId;
+    private int inspectorId;
+    private int inspectionTypeId;
+    private int reservationId;
+    private int vehicleId;
     private double emissions;
     private double brakes;
     private String faults;
-    private Date valid_until;
+    private Date validUntil;
 
-    public int getInspection_id() {
-        return inspection_id;
+    public int getInspectionId() {
+        return inspectionId;
     }
 
-    public void setInspection_id(int inspection_id) {
-        this.inspection_id = inspection_id;
+    public void setInspectionId(int inspectionId) {
+        this.inspectionId = inspectionId;
     }
 
-    public int getInspector_id() {
-        return inspector_id;
+    public int getInspectorId() {
+        return inspectorId;
     }
 
-    public void setInspector_id(int inspector_id) {
-        this.inspector_id = inspector_id;
+    public void setInspectorId(int inspectorId) {
+        this.inspectorId = inspectorId;
     }
 
-    public int getInspection_type_id() {
-        return inspection_type_id;
+    public int getInspectionTypeId() {
+        return inspectionTypeId;
     }
 
-    public void setInspection_type_id(int inspection_type_id) {
-        this.inspection_type_id = inspection_type_id;
+    public void setInspectionTypeId(int inspectionTypeId) {
+        this.inspectionTypeId = inspectionTypeId;
     }
 
-    public int getReservation_id() {
-        return reservation_id;
+    public int getReservationId() {
+        return reservationId;
     }
 
-    public void setReservation_id(int reservation_id) {
-        this.reservation_id = reservation_id;
+    public void setReservationId(int reservationId) {
+        this.reservationId = reservationId;
     }
 
-    public int getVehicle_id() {
-        return vehicle_id;
+    public int getVehicleId() {
+        return vehicleId;
     }
 
-    public void setVehicle_id(int vehicle_id) {
-        this.vehicle_id = vehicle_id;
+    public void setVehicleId(int vehicleId) {
+        this.vehicleId = vehicleId;
     }
 
     public double getEmissions() {
@@ -78,26 +78,26 @@ public class Inspection {
         this.faults = faults;
     }
 
-    public Date getValid_until() {
-        return valid_until;
+    public Date getValidUntil() {
+        return validUntil;
     }
 
-    public void setValid_until(Date valid_until) {
-        this.valid_until = valid_until;
+    public void setValidUntil(Date validUntil) {
+        this.validUntil = validUntil;
     }
 
     @Override
     public String toString() {
         return "Inspection{" +
-                "inspection_id=" + inspection_id +
-                ", inspector_id='" + inspector_id + '\'' +
-                ", inspection_type_id='" + inspection_type_id + '\'' +
-                ", reservation_id='" + reservation_id + '\'' +
-                ", vehicle_id='" + vehicle_id + '\'' +
+                "inspection_id=" + inspectionId +
+                ", inspector_id='" + inspectorId + '\'' +
+                ", inspection_type_id='" + inspectionTypeId + '\'' +
+                ", reservation_id='" + reservationId + '\'' +
+                ", vehicle_id='" + vehicleId + '\'' +
                 ", emissions='" + emissions + '\'' +
                 ", brakes='" + brakes + '\'' +
                 ", faults=" + faults + '\'' +
-                ", valid_until=" + valid_until +
+                ", valid_until=" + validUntil +
                 '}';
     }
 }

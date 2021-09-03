@@ -4,18 +4,18 @@ import java.util.Calendar;
 
 public class Reservation {
 
-    private int reservation_id;
+    private int reservationId;
     private Calendar reservation;
-    private int processed_by;
-    private int customer_id;
-    private int vehicle_id;
+    private int processedBy;
+    private int customerId;
+    private int vehicleId;
 
-    public int getReservation_id() {
-        return reservation_id;
+    public int getReservationId() {
+        return reservationId;
     }
 
-    public void setReservation_id(int reservation_id) {
-        this.reservation_id = reservation_id;
+    public void setReservationId(int reservationId) {
+        this.reservationId = reservationId;
     }
 
     public Calendar getReservation() {
@@ -26,38 +26,38 @@ public class Reservation {
         this.reservation = reservation;
     }
 
-    public int getProcessed_by() {
-        return processed_by;
+    public int getProcessedBy() {
+        return processedBy;
     }
 
-    public void setProcessed_by(int processed_by) {
-        this.processed_by = processed_by;
+    public void setProcessedBy(int processedBy) {
+        this.processedBy = processedBy;
     }
 
-    public int getCustomer_id() {
-        return customer_id;
+    public int getCustomerId() {
+        return customerId;
     }
 
-    public void setCustomer_id(int customer_id) {
-        this.customer_id = customer_id;
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
     }
 
-    public int getVehicle_id() {
-        return vehicle_id;
+    public int getVehicleId() {
+        return vehicleId;
     }
 
-    public void setVehicle_id(int vehicle_id) {
-        this.vehicle_id = vehicle_id;
+    public void setVehicleId(int vehicleId) {
+        this.vehicleId = vehicleId;
     }
 
     @Override
     public String toString() {
         return "Reservation{" +
-                "reservation_id=" + reservation_id +
+                "reservation_id=" + reservationId +
                 ", reservation='" + reservation + '\'' +
-                ", processed_by='" + processed_by + '\'' +
-                ", customer_id='" + customer_id + '\'' +
-                ", vehicle_id='" + vehicle_id +
+                ", processed_by='" + processedBy + '\'' +
+                ", customer_id='" + customerId + '\'' +
+                ", vehicle_id='" + vehicleId +
                 '}';
     }
 }

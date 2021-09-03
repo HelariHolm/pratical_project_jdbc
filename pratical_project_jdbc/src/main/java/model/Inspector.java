@@ -4,18 +4,18 @@ import java.util.Date;
 
 public class Inspector {
 
-    private int inspector_id;
+    private int inspectorId;
     private String firstName;
     private String lastName;
-    private Date licence_expiry;
-    private int veh_category_id;
+    private Date licenceExpiry;
+    private int vehCategoryId;
 
-    public int getInspector_id() {
-        return inspector_id;
+    public int getInspectorId() {
+        return inspectorId;
     }
 
-    public void setInspector_id(int inspector_id) {
-        this.inspector_id = inspector_id;
+    public void setInspectorId(int inspectorId) {
+        this.inspectorId = inspectorId;
     }
 
     public String getFirstName() {
@@ -34,29 +34,29 @@ public class Inspector {
         this.lastName = lastName;
     }
 
-    public Date getLicence_expiry() {
-        return licence_expiry;
+    public Date getLicenceExpiry() {
+        return licenceExpiry;
     }
 
-    public void setLicence_expiry(Date licence_expiry) {
-        this.licence_expiry = licence_expiry;
+    public void setLicenceExpiry(Date licenceExpiry) {
+        this.licenceExpiry = licenceExpiry;
     }
 
-    public int getVeh_category_id() {
-        return veh_category_id;
+    public int getVehCategoryId() {
+        return vehCategoryId;
     }
 
-    public void setVeh_category_id(int veh_category_id) {
-        this.veh_category_id = veh_category_id;
+    public void setVehCategoryId(int vehCategoryId) {
+        this.vehCategoryId = vehCategoryId;
     }
 
     @Override
     public String toString() {
         return "Inspector{" +
-                "inspector_id=" + inspector_id +
+                "inspector_id=" + inspectorId +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", veh_category_id='" + veh_category_id +
+                ", veh_category_id='" + vehCategoryId +
                 '}';
     }
 }
