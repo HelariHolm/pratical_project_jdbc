@@ -1,6 +1,7 @@
 package persistence;
 
 import model.ReportAllInspectionsByMonths;
+import model.ReportInspectionsByType;
 import model.ReportPaymentsByMonth;
 import util.DBUtil;
 
@@ -97,6 +98,42 @@ public class RepositoryStatistics {
         return list;
     }
 
+    public Integer countReservationsNotProcessed() {
+        String query = "SELECT COUNT(processed_by) as total FROM reservation WHERE processed_by = NULL";
+        int count = 0;
+        try {
+            pstmt = DBUtil.getDBConnection().prepareStatement(query);
+            resultSet = pstmt.executeQuery();
+            while (resultSet.next()) {
+                count++;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return count;
+    }
 
+    public List<ReportInspectionsByType> countInspectionsByType() {
+        List<ReportInspectionsByType> list = new ArrayList<>();
+        String query = "SELECT COUNT(inspection.inspection_id) as total,  " +
+                "inspection_type.type_name AS inspection_type " +
+                "FROM inspection " +
+                "INNER JOIN inspection_type " +
+                "ON inspection_type.inspection_type_id = inspection.inspection_type_id " +
+                "GROUP BY inspection_type.type_name";
+        try {
+            pstmt = DBUtil.getDBConnection().prepareStatement(query);
+            resultSet = pstmt.executeQuery();
+            while (resultSet.next()) {
+                ReportInspectionsByType report = new ReportInspectionsByType();
+                report.setCount(resultSet.getInt("total"));
+                report.setInspectionType(resultSet.getString("inspection_type"));
+                list.add(report);
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return list;
+    }
 
 }

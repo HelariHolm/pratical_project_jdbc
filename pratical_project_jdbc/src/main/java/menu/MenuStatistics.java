@@ -1,6 +1,7 @@
 package menu;
 
 import model.ReportAllInspectionsByMonths;
+import model.ReportInspectionsByType;
 import model.ReportPaymentsByMonth;
 import persistence.RepositoryStatistics;
 
@@ -19,8 +20,8 @@ public class MenuStatistics {
         System.out.println("1: List payments balance by month");
         System.out.println("2: Count Inspections by Inspector by month");
         System.out.println("3: Count Inspections by Inspector firstName");
-        System.out.println("4: ");
-        System.out.println("5: ");
+        System.out.println("4: Count the Reservations that have not been processed");
+        System.out.println("5: Count the Inspections by type");
         System.out.println("100 - Return to Main Menu");
         System.out.println("\n/***************************************************/");
         return input.nextInt();
@@ -40,6 +41,12 @@ public class MenuStatistics {
                     break;
                 case 3:
                     menuCountInspectionsByInspector(input);
+                    break;
+                case 4:
+                    menuCountReservationsNotProcessed();
+                    break;
+                case 5:
+                    menuCountInspectionsByType();
                     break;
                 case 100:
                     MainMenu.getMainMenu();
@@ -110,7 +117,31 @@ public class MenuStatistics {
         } else {
             System.out.println("No inspections to display");
         }
+    }
 
+    private void menuCountReservationsNotProcessed() {
+        int count = repositoryStatistics.countReservationsNotProcessed();
+        System.out.println("The count of reservations that have not been processed is: " + count);
+    }
+
+    private void menuCountInspectionsByType() {
+        List<ReportInspectionsByType> list = repositoryStatistics.countInspectionsByType();
+        if (list != null && !list.isEmpty()) {
+            for (ReportInspectionsByType report : list) {
+                System.out.println("Total number of inspections by type: ");
+                String word;
+                if (report.getCount() == 1) {
+                    word = "inspection";
+                } else {
+                    word = "inspections";
+                }
+                System.out.println(report.getInspectionType()
+                        + " - " + report.getCount());
+
+            }
+        } else {
+            System.out.println("No inspections to count");
+        }
     }
 
 
